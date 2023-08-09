@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expanding Cards</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <img src="images/photo-2.avif" alt="" class="image" />
+      <img src="images/photo-3.avif" alt="" class="image" />
+      <img src="images/photo-4.avif" alt="" class="image active" />
+      <img src="images/photo-7.avif" alt="" class="image" />
+      <img src="images/photo-6.avif" alt="" class="image" />
+    </section>
+
+    <script>
+      const images = document.querySelectorAll(".image");
+      images.forEach((img) => {
+        img.addEventListener("click", () => {
+          images.forEach((img) => {
+            img.classList.remove("active");
+          });
+          img.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
