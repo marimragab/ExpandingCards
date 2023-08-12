@@ -2,7 +2,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: aquamarine;
+  margin-top: 50px;
 }
 
 img {
@@ -15,10 +15,19 @@ img {
   transition: 1s ease-in-out;
 }
 
+.card {
+  transition: 1s ease-in-out;
+}
 /* img:hover {
   width: 400px;
 } */
 
 .image.active {
   width: 400px;
+}
+
+@media (max-width: 768px) {
+  .image.active {
+    width: 95%;
+  }
 }
